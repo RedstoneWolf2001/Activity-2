@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace Activity_2
 {
-    public partial class Form1 : Form
+    public partial class Activity2 : Form
     {
-        public Form1()
+        public Activity2()
         {
             InitializeComponent();
+        }
+
+        private void ConvertButton_Click(object sender, EventArgs e)
+        {
+            double weight = Convert.ToDouble(InputWeightTB.Text);
+
+            weight /= 4.2;
+
+            OutputWeightTB.Text = weight.ToString();
+
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
